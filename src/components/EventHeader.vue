@@ -1,4 +1,3 @@
-<!-- components/EventHeader.vue -->
 <template>
 	<div class="event-header">
 		<div class="event-header__breadcrumb">
@@ -6,7 +5,9 @@
 		</div>
 		<div class="event-header__main">
 			<div class="event-header__info">
-				<span class="event-header__sport-icon">{{ event.sport.icon }}</span>
+				<span class="event-header__sport-icon">{{
+					event.sport.icon
+				}}</span>
 				<span class="event-header__label">
 					{{ hasEventLabel(event) ? event.label : 'Other Event' }}
 				</span>
@@ -36,13 +37,13 @@ defineProps({
 .event-header {
 	padding: 1rem;
 	background-color: #f9fafb;
-	border-radius: .25rem;
+	border-radius: 0.25rem;
 }
 
 .event-header__breadcrumb {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	color: #67798e;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 
 .event-header__main {
@@ -57,11 +58,11 @@ defineProps({
 }
 
 .event-header__sport-icon {
-	margin-right: .5rem;
-	font-size: .75rem;
+	margin-right: 0.5rem;
+	font-size: 0.75rem;
 	background-color: #ebeafc;
 	color: #382cdd;
-	padding: .25rem 0.5rem;
+	padding: 0.25rem 0.5rem;
 	border-radius: 5rem;
 }
 
@@ -71,7 +72,7 @@ defineProps({
 }
 
 .event-header__date {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	color: #67798e;
 }
 </style>

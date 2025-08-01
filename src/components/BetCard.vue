@@ -1,4 +1,3 @@
-<!-- components/BetCard.vue -->
 <template>
 	<div class="bet-card">
 		<div class="bet-card__header">
@@ -50,8 +49,8 @@ defineEmits(['remove']);
 <style scoped>
 .bet-card {
 	border: 1px solid #d1d5db;
-	padding: .75rem;
-	border-radius: .375rem;
+	padding: 0.75rem;
+	border-radius: 0.375rem;
 	background-color: white;
 	transition: all 0.2s ease;
 }
@@ -64,11 +63,11 @@ defineEmits(['remove']);
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 
 .bet-card__event {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: #1f2937;
 }
@@ -97,13 +96,13 @@ defineEmits(['remove']);
 }
 
 .bet-card__question {
-	font-size: .75rem;
+	font-size: 0.75rem;
 	color: #6b7280;
-	margin-bottom: .25rem;
+	margin-bottom: 0.25rem;
 }
 
 .bet-card__choice {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -117,8 +116,8 @@ defineEmits(['remove']);
 	font-weight: 600;
 	color: #059669;
 	background-color: #ecfdf5;
-	padding: .125rem 0.375rem;
-	border-radius: .25rem;
-	font-size: .875rem;
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
 }
 </style>

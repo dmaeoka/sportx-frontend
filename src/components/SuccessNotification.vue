@@ -1,4 +1,3 @@
-<!-- components/SuccessNotification.vue -->
 <template>
 	<div class="notification">
 		<div class="notification__content">
@@ -48,7 +47,7 @@ defineEmits(['close']);
 	color: #166534; /* green-700 equivalent */
 	padding: 1rem;
 	margin: 1rem;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 }
 
 .notification__content {
@@ -62,8 +61,8 @@ defineEmits(['close']);
 }
 
 .notification__details {
-	font-size: .875rem;
-	margin-top: .25rem;
+	font-size: 0.875rem;
+	margin-top: 0.25rem;
 }
 
 .notification__close {

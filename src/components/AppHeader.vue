@@ -5,10 +5,6 @@
 	</header>
 </template>
 
-<script setup>
-// No props or logic needed for this simple header
-</script>
-
 <style scoped>
 .header {
 	background-color: #293039;

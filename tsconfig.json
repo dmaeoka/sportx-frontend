@@ -1,4 +1,44 @@
 {
 	// https://nuxt.com/docs/guide/concepts/typescript
-	"extends": "./.nuxt/tsconfig.json"
+	"extends": "./.nuxt/tsconfig.json",
+	"compilerOptions": {
+		// Basic settings
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "preserve",
+
+		// Strict type checking
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+
+		// Additional checks (we'll start with these off and enable later)
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"exactOptionalPropertyTypes": false,
+
+		// Module resolution
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./*"],
+			"@/*": ["./*"]
+		},
+
+		// Other useful options
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"useDefineForClassFields": true
+	},
+	"include": ["**/*.ts", "**/*.tsx", "**/*.vue"],
+	"exclude": ["node_modules", "dist", ".nuxt", ".output"]
 }

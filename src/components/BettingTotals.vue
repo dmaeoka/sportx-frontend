@@ -32,11 +32,11 @@ defineProps({
 .betting-totals {
 	display: flex;
 	flex-direction: column;
-	gap: .5rem;
+	gap: 0.5rem;
 	margin: 1rem 0;
-	padding: .75rem;
+	padding: 0.75rem;
 	background-color: #fff;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 	border: 1px solid #d1d5db;
 }
 
@@ -47,13 +47,13 @@ defineProps({
 }
 
 .betting-totals__label {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	color: #64748b;
 	font-weight: 500;
 }
 
 .betting-totals__value {
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 600;
 	color: #1e293b;
 }

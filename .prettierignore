@@ -1,0 +1,7 @@
+.nuxt
+.venv
+.vscode
+.husky
+.git
+node_modules/
+public/

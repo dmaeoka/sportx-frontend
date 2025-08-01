@@ -1,4 +1,3 @@
-<!-- components/BettingSlip.vue -->
 <template>
 	<div class="betting-slip">
 		<div class="betting-slip__header">
@@ -126,7 +125,7 @@ defineEmits([
 .betting-slip__bets {
 	display: flex;
 	flex-direction: column;
-	gap: .75rem;
+	gap: 0.75rem;
 	margin-bottom: 1.5rem;
 }
 

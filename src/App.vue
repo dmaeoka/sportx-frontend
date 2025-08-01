@@ -1,10 +1,8 @@
-<!-- Working App.vue - Fixed version -->
 <template>
 	<div class="app">
-		<!-- Header -->
+		<!-- HEADER -->
 		<AppHeader />
-
-		<!-- Success Notification -->
+		<!-- SUCCESS NOTIFICATION -->
 		<SuccessNotification
 			v-if="showSuccessMessage"
 			:submitted-bets="submittedBets"
@@ -12,16 +10,14 @@
 			:submitted-potential-gain="submittedPotentialGain"
 			@close="closeSuccessMessage"
 		/>
-
 		<main class="app__main">
-			<!-- Events List -->
+			<!-- EVENTS LIST -->
 			<EventsList
 				:events="sportsData.events"
 				:selected-bets="selectedBets"
 				@toggle-bet="handleToggleBet"
 			/>
-
-			<!-- Betting Slip -->
+			<!-- BETTING SLIP -->
 			<BettingSlip
 				:selected-bets="selectedBets"
 				:bet-amount="betAmount"
@@ -36,17 +32,16 @@
 				@submit="handleSubmit"
 			/>
 		</main>
-
-		<!-- Footer -->
 		<AppFooter />
 	</div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+// Import mock data
 import sportsData from './data/products.json';
 
-// Import components
+// Import the components
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import BettingSlip from './components/BettingSlip.vue';
@@ -59,9 +54,9 @@ import { useSuccessMessage } from './composables/useSuccessMessage.js';
 
 // State
 const selectedBets = ref([]);
-const betAmount = ref(1.0);
+const betAmount = ref(1); // initial amount
 
-// Use composables
+// Use composables deconstructing the hook
 const {
 	showSuccessMessage,
 	submittedBets,
@@ -86,15 +81,17 @@ const {
 
 // Event handlers - fixed to handle parameters correctly
 const handleToggleBet = (event, choice) => {
-	console.log('Toggle bet:', event.label, choice.actor.label); // Debug log
+	console.log('Toggle bet:', event.label, choice.actor.label);
 	toggleBet(event, choice);
 };
 
 const handleRemoveBet = (betKey) => {
+	console.log('Remove bet:', betKey);
 	removeBet(betKey);
 };
 
 const handleUpdateAmount = (amount) => {
+	console.log('Update amount:', amount);
 	updateBetAmount(amount);
 };
 
@@ -109,6 +106,7 @@ const handleDecreaseAmount = () => {
 const handleSubmit = () => {
 	try {
 		const submissionData = submitBets();
+		console.log('Submitted bets:', submissionData);
 		showSuccess(
 			submissionData.bets,
 			submissionData.total,

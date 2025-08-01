@@ -1,60 +1,80 @@
-export interface Sport {
+/**
+ * Represents a betting choice within an event
+ */
+export interface BetChoice {
 	id: string;
-	label: string;
-	icon: string;
-}
-
-export interface Category {
-	id: string;
-	label: string;
-}
-
-export interface Competition {
-	id: string;
-	label: string;
-}
-
-export interface Actor {
-	id: string;
-	label: string;
-}
-
-export interface Choice {
-	id: string;
-	odd: number;
 	actor: {
 		label: string;
 	};
+	odd: number;
 }
 
-export interface BetData {
-	id: string;
+/**
+ * Represents a betting question
+ */
+export interface BetQuestion {
 	label: string;
-	choices: Choice[];
-	question: {
-		id: string;
-		label: string;
-	};
 }
 
+/**
+ * Represents betting data for an event
+ */
+export interface BetData {
+	question: BetQuestion;
+	choices: BetChoice[];
+}
+
+/**
+ * Represents a sports event with betting options
+ */
 export interface Event {
 	id: string;
 	label: string;
-	start: string;
-	sport: Sport;
-	category: Category;
-	competition: Competition;
-	bet: {
-		[key: string]: BetData;
+	sport: {
+		label: string;
+		icon: string;
 	};
+	category: {
+		label: string;
+	};
+	competition: {
+		label: string;
+	};
+	start: string; // ISO date string
+	bet: Record<string, BetData>;
 }
 
+/**
+ * Represents a bet that the user has selected
+ */
 export interface SelectedBet {
-	key: string;
-	eventLabel: string;
-	choiceLabel: string;
-	odd: number;
-	question: string;
-	eventId: string;
-	choiceId: string;
+	key: string; // Unique identifier: "eventId-choiceId"
+	eventLabel: string; // Display name of the event
+	choiceLabel: string; // Display name of the choice
+	odd: number; // Betting odd
+	question: string; // The betting question
+	eventId: string; // Reference to the event
+	choiceId: string; // Reference to the choice
+}
+
+/**
+ * Represents the data structure when bets are submitted
+ */
+export interface SubmissionData {
+	bets: SelectedBet[];
+	amount: number;
+	total: string;
+	potentialGain: string;
+	timestamp: string;
+}
+
+/**
+ * Return type interface for useEventHelpers composable
+ */
+export interface UseEventHelpersReturn {
+	formatDate: (dateString: string) => string;
+	hasEventLabel: (event: Event) => boolean;
+	getBetChoices: (event: Event) => BetChoice[];
+	getBetQuestion: (event: Event) => string;
+	getEventBreadcrumb: (event: Event) => string;
 }

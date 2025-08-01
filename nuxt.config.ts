@@ -9,6 +9,16 @@ export default defineNuxtConfig({
 	css: ['~/assets/css/main.css'],
 	vite: {
 		plugins: [tailwindcss()],
+		esbuild: {
+			target: 'esnext',
+		},
+	},
+	build: {
+		transpile: ['vue-toastification'],
+	},
+
+	imports: {
+		dirs: ['composables/**', 'utils/**'],
 	},
 	app: {
 		head: {

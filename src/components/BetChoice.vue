@@ -35,9 +35,9 @@ const buttonClasses = computed(() => [
 
 <style scoped>
 .bet-choice {
-	padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 	border: 2px solid;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	background-color: white;
@@ -62,8 +62,8 @@ const buttonClasses = computed(() => [
 }
 
 .bet-choice__label {
-	font-size: .875rem;
-	margin-bottom: .25rem;
+	font-size: 0.875rem;
+	margin-bottom: 0.25rem;
 }
 
 .bet-choice__odd {

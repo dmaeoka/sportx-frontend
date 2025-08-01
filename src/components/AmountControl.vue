@@ -64,27 +64,27 @@ const handleInput = (event) => {
 
 .amount-control__label {
 	display: block;
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 500;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 	color: #374151;
 }
 
 .amount-control__input-group {
 	display: flex;
 	align-items: stretch;
-	gap: .5rem;
+	gap: 0.5rem;
 }
 
 .amount-control__button {
 	border: 1px solid #d1d5db;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 	background-color: white;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: .5rem;
+	padding: 0.5rem;
 	transition: all 0.2s ease;
 	min-width: 2.5rem;
 }
@@ -106,11 +106,11 @@ const handleInput = (event) => {
 
 .amount-control__input {
 	flex: 1;
-	padding: .5rem;
+	padding: 0.5rem;
 	border: 1px solid #d1d5db;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 	text-align: center;
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 	transition: border-color 0.2s ease;
 }

@@ -1,4 +1,3 @@
-<!-- components/SubmitButton.vue -->
 <template>
 	<button
 		@click="$emit('submit')"
@@ -38,14 +37,14 @@ const buttonClasses = computed(() => [
 <style scoped>
 .submit-button {
 	width: 100%;
-	padding: .75rem 1rem;
-	border-radius: .375rem;
+	padding: 0.75rem 1rem;
+	border-radius: 0.375rem;
 	border: 2px solid;
 	font-weight: 600;
-	font-size: .875rem;
+	font-size: 0.875rem;
 	transition: all 0.2s ease;
 	text-transform: uppercase;
-	letter-spacing: .025em;
+	letter-spacing: 0.025em;
 }
 
 .submit-button--enabled {

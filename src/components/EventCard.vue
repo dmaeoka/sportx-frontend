@@ -1,4 +1,3 @@
-<!-- Fixed components/EventCard.vue -->
 <template>
 	<div class="event-card">
 		<EventHeader :event="event" />
