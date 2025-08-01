@@ -1,4 +1,3 @@
-<!-- Fixed components/BetChoice.vue -->
 <template>
 	<button @click="$emit('click')" :class="buttonClasses">
 		<div class="bet-choice__content">
@@ -11,7 +10,7 @@
 <script setup>
 import { computed } from 'vue';
 
-// Define props
+// Define props that this component can receive
 const props = defineProps({
 	choice: {
 		type: Object,
@@ -26,7 +25,7 @@ const props = defineProps({
 // Define events
 defineEmits(['click']);
 
-// Computed classes for the button
+// Class for the bet button if it's default or selected.
 const buttonClasses = computed(() => [
 	'bet-choice',
 	props.isSelected ? 'bet-choice--selected' : 'bet-choice--default',

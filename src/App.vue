@@ -1,7 +1,9 @@
 <template>
 	<div class="app">
 		<!-- HEADER -->
-		<AppHeader />
+		<AppHeader>
+			SportX Senior Lead Frontend
+		</AppHeader>
 		<!-- SUCCESS NOTIFICATION -->
 		<SuccessNotification
 			v-if="showSuccessMessage"
@@ -32,7 +34,9 @@
 				@submit="handleSubmit"
 			/>
 		</main>
-		<AppFooter />
+		<AppFooter>
+			GiG SportX {{ year }}
+		</AppFooter>
 	</div>
 </template>
 
@@ -53,8 +57,9 @@ import { useBettingLogic } from './composables/useBettingLogic.js';
 import { useSuccessMessage } from './composables/useSuccessMessage.js';
 
 // State
-const selectedBets = ref([]);
-const betAmount = ref(1); // initial amount
+const selectedBets = ref([]); // initial empty array
+const betAmount = ref(1); // initial amount of 1 eruo
+const year = new Date().getFullYear(); // Get the current year
 
 // Use composables deconstructing the hook
 const {
@@ -79,7 +84,7 @@ const {
 	hasBets,
 } = useBettingLogic(selectedBets, betAmount);
 
-// Event handlers - fixed to handle parameters correctly
+// Event handlers
 const handleToggleBet = (event, choice) => {
 	console.log('Toggle bet:', event.label, choice.actor.label);
 	toggleBet(event, choice);

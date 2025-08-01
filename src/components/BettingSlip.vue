@@ -5,12 +5,12 @@
 		</div>
 
 		<div class="betting-slip__content">
-			<!-- Empty state -->
+			<!-- Empty state if theres no bets -->
 			<div v-if="!hasBets" class="betting-slip__empty">
 				No bets chosen
 			</div>
 
-			<!-- Selected bets -->
+			<!-- All the bets selectsd -->
 			<div v-else class="betting-slip__bets">
 				<BetCard
 					v-for="bet in selectedBets"
@@ -20,7 +20,7 @@
 				/>
 			</div>
 
-			<!-- Controls section -->
+			<!-- Add or Remove value -->
 			<div class="betting-slip__controls">
 				<AmountControl
 					:amount="betAmount"
@@ -29,11 +29,13 @@
 					@decrease="$emit('decrease-amount')"
 				/>
 
+				<!-- Betting totals -->
 				<BettingTotals
 					:total="calculateTotal"
 					:potential-gain="calculatePotentialGain"
 				/>
 
+				<!-- Submit button -->
 				<SubmitButton
 					:has-bets="hasBets"
 					:bet-count="betCount"

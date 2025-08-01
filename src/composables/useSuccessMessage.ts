@@ -1,20 +1,5 @@
 import { ref, type Ref } from 'vue';
-import type { SelectedBet } from '../types';
-
-export interface UseSuccessMessageReturn {
-	readonly showSuccessMessage: Ref<boolean>;
-	readonly submittedBets: Ref<SelectedBet[]>;
-	readonly submittedTotal: Ref<string>;
-	readonly submittedPotentialGain: Ref<string>;
-
-	// Actions
-	showSuccess: (
-		bets: SelectedBet[],
-		total: string,
-		potentialGain: string
-	) => void;
-	closeSuccessMessage: () => void;
-}
+import type { SelectedBet, UseSuccessMessageReturn } from '../types';
 
 export function useSuccessMessage(): UseSuccessMessageReturn {
 	const showSuccessMessage: Ref<boolean> = ref(false);

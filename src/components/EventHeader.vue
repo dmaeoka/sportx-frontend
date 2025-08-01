@@ -21,10 +21,9 @@
 
 <script setup>
 import { useEventHelpers } from '../composables/useEventHelpers.js';
-// Use helper functions
 const { formatDate, hasEventLabel, getEventBreadcrumb } = useEventHelpers();
 
-// Define props
+// Define props that this component can receive
 defineProps({
 	event: {
 		type: Object,

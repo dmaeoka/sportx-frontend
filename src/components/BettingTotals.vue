@@ -1,4 +1,3 @@
-<!-- components/BettingTotals.vue -->
 <template>
 	<div class="betting-totals">
 		<div class="betting-totals__row">
@@ -7,15 +6,14 @@
 		</div>
 		<div class="betting-totals__row">
 			<span class="betting-totals__label">Potential Gain</span>
-			<span class="betting-totals__value betting-totals__value--gain"
-				>{{ potentialGain }}€</span
+			<span class="betting-totals__value betting-totals__value--gain">{{ potentialGain }}€</span
 			>
 		</div>
 	</div>
 </template>
 
 <script setup>
-// Define props
+// Define props that this component can receive
 defineProps({
 	total: {
 		type: String,

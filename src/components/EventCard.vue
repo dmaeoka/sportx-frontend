@@ -15,7 +15,7 @@ import { useEventHelpers } from '../composables/useEventHelpers.js';
 import EventBetting from './EventBetting.vue';
 import EventHeader from './EventHeader.vue';
 
-// Define props
+// Define props that this component can receive
 defineProps({
 	event: {
 		type: Object,
@@ -27,14 +27,14 @@ defineProps({
 	},
 });
 
-// Define events
+// Define events that this component can emit
 const emit = defineEmits(['toggle-bet']);
 
 // Use helpers
 const { hasEventLabel } = useEventHelpers();
 
-// Handle the toggle bet event and pass it up
 const handleToggleBet = (event, choice) => {
+	// Handle the toggle bet event and pass it up
 	emit('toggle-bet', event, choice);
 };
 </script>

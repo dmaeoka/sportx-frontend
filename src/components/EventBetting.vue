@@ -1,4 +1,3 @@
-<!-- Fixed components/EventBetting.vue -->
 <template>
 	<div class="event-betting">
 		<div class="event-betting__choices">
@@ -17,7 +16,7 @@
 import { useEventHelpers } from '../composables/useEventHelpers.js';
 import BetChoice from './BetChoice.vue';
 
-// Define props
+// Define props that this component can receive
 const props = defineProps({
 	event: {
 		type: Object,
@@ -42,8 +41,8 @@ const isSelectedChoice = (choiceId) => {
 	);
 };
 
-// Handle choice click and emit the toggle-bet event
 const handleChoiceClick = (choice) => {
+	// On click, this will emit the toggle-bet event
 	emit('toggle-bet', props.event, choice);
 };
 </script>

@@ -28,8 +28,8 @@ defineProps({
 // Define events this component can emit
 const emit = defineEmits(['toggle-bet']);
 
-// Handle the toggle bet event and pass it up
 const handleToggleBet = (event, choice) => {
+	// Emit the event to the parent component
 	emit('toggle-bet', event, choice);
 };
 </script>

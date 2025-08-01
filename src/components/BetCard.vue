@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-// Define props
+// Define props that this component can receive
 defineProps({
 	bet: {
 		type: Object,
@@ -42,7 +42,7 @@ defineProps({
 	},
 });
 
-// Define events
+// Define events that this component can emit
 defineEmits(['remove']);
 </script>
 

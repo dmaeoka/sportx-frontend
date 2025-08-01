@@ -4,26 +4,9 @@ import type {
 	Event,
 	SelectedBet,
 	SubmissionData,
+	UseBettingLogicReturn
 } from '../types';
 import { useEventHelpers } from './useEventHelpers';
-
-/**
- * Return type interface for useBettingLogic composable
- */
-export interface UseBettingLogicReturn {
-	toggleBet: (event: Event, choice: BetChoice) => void;
-	removeBet: (betKey: string) => void;
-	increaseBetAmount: () => void;
-	decreaseBetAmount: () => void;
-	updateBetAmount: (amount: number | string) => void;
-	submitBets: () => SubmissionData;
-	clearAllBets: () => void;
-	isSelected: (eventId: string, choiceId: string) => boolean;
-	calculateTotal: ComputedRef<string>;
-	calculatePotentialGain: ComputedRef<string>;
-	betCount: ComputedRef<number>;
-	hasBets: ComputedRef<boolean>;
-}
 
 /**
  * Composable for managing betting logic and state

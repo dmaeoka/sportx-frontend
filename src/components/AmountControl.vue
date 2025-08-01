@@ -1,4 +1,3 @@
-<!-- components/AmountControl.vue -->
 <template>
 	<div class="amount-control">
 		<label class="amount-control__label">Amount</label>
@@ -13,7 +12,6 @@
 					class="amount-control__icon"
 				/>
 			</button>
-
 			<input
 				:value="amount"
 				@input="handleInput"
@@ -23,7 +21,6 @@
 				class="amount-control__input"
 				aria-label="Bet amount"
 			/>
-
 			<button
 				@click="$emit('increase')"
 				class="amount-control__button"
@@ -39,7 +36,7 @@
 </template>
 
 <script setup>
-// Define props
+// Define props that this component can receive
 defineProps({
 	amount: {
 		type: Number,
@@ -48,11 +45,12 @@ defineProps({
 	},
 });
 
-// Define events
+// Define events taht this component can emit
 const emit = defineEmits(['update', 'increase', 'decrease']);
 
 // Handle input changes
 const handleInput = (event) => {
+	// Emit the update event with the new amount
 	emit('update', event.target.value);
 };
 </script>

@@ -78,3 +78,36 @@ export interface UseEventHelpersReturn {
 	getBetQuestion: (event: Event) => string;
 	getEventBreadcrumb: (event: Event) => string;
 }
+
+/**
+ * Return type interface for useBettingLogic composable
+ */
+export interface UseBettingLogicReturn {
+	toggleBet: (event: Event, choice: BetChoice) => void;
+	removeBet: (betKey: string) => void;
+	increaseBetAmount: () => void;
+	decreaseBetAmount: () => void;
+	updateBetAmount: (amount: number | string) => void;
+	submitBets: () => SubmissionData;
+	clearAllBets: () => void;
+	isSelected: (eventId: string, choiceId: string) => boolean;
+	calculateTotal: ComputedRef<string>;
+	calculatePotentialGain: ComputedRef<string>;
+	betCount: ComputedRef<number>;
+	hasBets: ComputedRef<boolean>;
+}
+
+export interface UseSuccessMessageReturn {
+	readonly showSuccessMessage: Ref<boolean>;
+	readonly submittedBets: Ref<SelectedBet[]>;
+	readonly submittedTotal: Ref<string>;
+	readonly submittedPotentialGain: Ref<string>;
+
+	// Actions
+	showSuccess: (
+		bets: SelectedBet[],
+		total: string,
+		potentialGain: string
+	) => void;
+	closeSuccessMessage: () => void;
+}

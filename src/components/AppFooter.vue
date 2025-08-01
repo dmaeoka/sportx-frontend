@@ -1,13 +1,11 @@
 <!-- components/AppFooter.vue -->
 <template>
 	<footer class="footer">
-		<p class="footer__text">GiG SportX {{ year }}</p>
+		<p class="footer__text">
+			<slot></slot>
+		</p>
 	</footer>
 </template>
-
-<script setup>
-const year = new Date().getFullYear();
-</script>
 
 <style scoped>
 .footer {

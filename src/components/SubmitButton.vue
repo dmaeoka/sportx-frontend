@@ -24,10 +24,10 @@ const props = defineProps({
 	},
 });
 
-// Define events
+// Submit event
 defineEmits(['submit']);
 
-// Computed button classes
+// Test if the button can be submitted or not, then add a disabled class
 const buttonClasses = computed(() => [
 	'submit-button',
 	props.hasBets ? 'submit-button--enabled' : 'submit-button--disabled',

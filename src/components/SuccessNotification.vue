@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-// Define props that the component expects
+// Which props the component is expecting
 defineProps({
 	submittedBets: {
 		type: Array,
@@ -36,18 +36,23 @@ defineProps({
 	},
 });
 
-// Define events this component can emit
+// emit close on click
 defineEmits(['close']);
 </script>
 
 <style scoped>
 .notification {
-	background-color: #dcfce7; /* green-100 equivalent */
-	border: 1px solid #86efac; /* green-400 equivalent */
-	color: #166534; /* green-700 equivalent */
+	--text-colour: #166534;
+	--text-colour-hover: #14532d;
+	--notification-bg-colour: #dcfce7;
+	--notification-border-colour: #86efac;
+
+	background-color: var(--notification-bg-colour);
+	border: 1px solid var(--notification-border-colour);
+	color: var(--text-colour);
 	padding: 1rem;
 	margin: 1rem;
-	border-radius: 0.375rem;
+	border-radius: .375rem;
 }
 
 .notification__content {
@@ -76,11 +81,11 @@ defineEmits(['close']);
 .notification__close-icon {
 	width: 1.5rem;
 	height: 1.5rem;
-	color: #166534; /* green-700 equivalent */
+	color: var(--text-colour);
 	transition: color 0.2s ease;
 }
 
 .notification__close:hover .notification__close-icon {
-	color: #14532d; /* green-900 equivalent */
+	color: var(--text-colour-hover);
 }
 </style>
