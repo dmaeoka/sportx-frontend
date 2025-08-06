@@ -6,7 +6,8 @@
 		</div>
 		<div class="betting-totals__row">
 			<span class="betting-totals__label">Potential Gain</span>
-			<span class="betting-totals__value betting-totals__value--gain">{{ potentialGain }}€</span
+			<span class="betting-totals__value betting-totals__value--gain"
+				>{{ potentialGain }}€</span
 			>
 		</div>
 	</div>

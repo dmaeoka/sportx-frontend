@@ -183,7 +183,7 @@ npm run generate
 
 1. **Nuxt.js Choice**: Selected as the primary framework as requested
 2. **Composition API**: Used for better TypeScript support and modern Vue patterns
-4. **Component Structure**: Single page application for simplicity
+3. **Component Structure**: Single page application for simplicity
 
 ### Potential Improvements
 

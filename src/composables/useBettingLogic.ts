@@ -1,10 +1,10 @@
-import { computed, type ComputedRef, type Ref } from 'vue';
+import { computed, type Ref } from 'vue';
 import type {
 	BetChoice,
 	Event,
 	SelectedBet,
 	SubmissionData,
-	UseBettingLogicReturn
+	UseBettingLogicReturn,
 } from '../types';
 import { useEventHelpers } from './useEventHelpers';
 
@@ -107,7 +107,9 @@ export function useBettingLogic(
 	 * Returns a computed property for reactivity
 	 */
 	const calculateTotal = computed((): string => {
-		return selectedBets.value.length > 0 ? (betAmount.value * selectedBets.value.length).toFixed(2) : '0.00';
+		return selectedBets.value.length > 0
+			? (betAmount.value * selectedBets.value.length).toFixed(2)
+			: '0.00';
 	});
 
 	/**

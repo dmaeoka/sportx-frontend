@@ -1,9 +1,7 @@
 <template>
 	<div class="app">
 		<!-- HEADER -->
-		<AppHeader>
-			SportX Senior Lead Frontend
-		</AppHeader>
+		<AppHeader> SportX Senior Lead Frontend </AppHeader>
 		<!-- SUCCESS NOTIFICATION -->
 		<SuccessNotification
 			v-if="showSuccessMessage"
@@ -34,27 +32,25 @@
 				@submit="handleSubmit"
 			/>
 		</main>
-		<AppFooter>
-			GiG SportX {{ year }}
-		</AppFooter>
+		<AppFooter> GiG SportX {{ year }} </AppFooter>
 	</div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 // Import mock data
-import sportsData from './data/products.json';
+import sportsData from '@/data/products.json';
 
 // Import the components
-import AppFooter from './components/AppFooter.vue';
-import AppHeader from './components/AppHeader.vue';
-import BettingSlip from './components/BettingSlip.vue';
-import EventsList from './components/EventsList.vue';
-import SuccessNotification from './components/SuccessNotification.vue';
+import AppFooter from '@/components/AppFooter.vue';
+import AppHeader from '@/components/AppHeader.vue';
+import BettingSlip from '@/components/BettingSlip.vue';
+import EventsList from '@/components/EventsList.vue';
+import SuccessNotification from '@/components/SuccessNotification.vue';
 
 // Import composables
-import { useBettingLogic } from './composables/useBettingLogic.js';
-import { useSuccessMessage } from './composables/useSuccessMessage.js';
+import { useBettingLogic } from '@/composables/useBettingLogic.js';
+import { useSuccessMessage } from '@/composables/useSuccessMessage.js';
 
 // State
 const selectedBets = ref([]); // initial empty array

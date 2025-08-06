@@ -52,7 +52,7 @@ defineEmits(['close']);
 	color: var(--text-colour);
 	padding: 1rem;
 	margin: 1rem;
-	border-radius: .375rem;
+	border-radius: 0.375rem;
 }
 
 .notification__content {
