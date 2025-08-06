@@ -39,6 +39,9 @@ export function useEventHelpers(): UseEventHelpersReturn {
 	 */
 	const getBetChoices = (event: Event): BetChoice[] => {
 		const betData = Object.values(event.bet)[0];
+		if (!betData || !betData.choices) {
+			throw new Error('Event has no valid bet data');
+		}
 		return betData.choices;
 	};
 
@@ -49,6 +52,9 @@ export function useEventHelpers(): UseEventHelpersReturn {
 	 */
 	const getBetQuestion = (event: Event): string => {
 		const betData = Object.values(event.bet)[0];
+		if (!betData || !betData.question) {
+			throw new Error('Event has no valid bet question');
+		}
 		return betData.question.label;
 	};
 

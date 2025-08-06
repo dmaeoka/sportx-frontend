@@ -1,3 +1,5 @@
+import type { ComputedRef, Ref } from 'vue';
+
 /**
  * Represents a betting choice within an event
  */
@@ -97,6 +99,9 @@ export interface UseBettingLogicReturn {
 	hasBets: ComputedRef<boolean>;
 }
 
+/**
+ * Return type interface for useSuccessMessage composable
+ */
 export interface UseSuccessMessageReturn {
 	readonly showSuccessMessage: Ref<boolean>;
 	readonly submittedBets: Ref<SelectedBet[]>;
