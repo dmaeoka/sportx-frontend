@@ -1,8 +1,8 @@
 <template>
 	<button
-		@click="$emit('submit')"
 		:disabled="!hasBets"
 		:class="buttonClasses"
+		@click="$emit('submit')"
 	>
 		<span v-if="hasBets">Submit bets ({{ betCount }})</span>
 		<span v-else>Submit bets</span>

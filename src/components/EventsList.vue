@@ -11,8 +11,6 @@
 </template>
 
 <script setup>
-import EventCard from './EventCard.vue';
-
 // Define props
 defineProps({
 	events: {

@@ -47,10 +47,6 @@
 </template>
 
 <script setup>
-import AmountControl from './AmountControl.vue';
-import BetCard from './BetCard.vue';
-import BettingTotals from './BettingTotals.vue';
-import SubmitButton from './SubmitButton.vue';
 
 // Define props
 defineProps({

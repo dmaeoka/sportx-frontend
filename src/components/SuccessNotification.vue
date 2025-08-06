@@ -9,7 +9,10 @@
 					{{ submittedPotentialGain }}€)
 				</div>
 			</div>
-			<button @click="$emit('close')" class="notification__close">
+			<button
+				type="button"
+				class="notification__close"
+				@click="$emit('close')">
 				<Icon
 					name="material-symbols:close-rounded"
 					class="notification__close-icon"

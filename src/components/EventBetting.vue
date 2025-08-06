@@ -13,9 +13,6 @@
 </template>
 
 <script setup>
-import { useEventHelpers } from '../composables/useEventHelpers.js';
-import BetChoice from './BetChoice.vue';
-
 // Define props that this component can receive
 const props = defineProps({
 	event: {

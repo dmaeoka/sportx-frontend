@@ -20,7 +20,6 @@
 </template>
 
 <script setup>
-import { useEventHelpers } from '../composables/useEventHelpers.js';
 const { formatDate, hasEventLabel, getEventBreadcrumb } = useEventHelpers();
 
 // Define props that this component can receive

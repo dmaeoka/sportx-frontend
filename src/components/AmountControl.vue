@@ -3,9 +3,9 @@
 		<label class="amount-control__label">Amount</label>
 		<div class="amount-control__input-group">
 			<button
-				@click="$emit('decrease')"
 				class="amount-control__button"
 				aria-label="Decrease amount"
+				@click="$emit('decrease')"
 			>
 				<Icon
 					name="material-symbols:remove"
@@ -14,17 +14,17 @@
 			</button>
 			<input
 				:value="amount"
-				@input="handleInput"
 				type="number"
 				step="0.1"
 				min="0.1"
 				class="amount-control__input"
 				aria-label="Bet amount"
+				@input="handleInput"
 			/>
 			<button
-				@click="$emit('increase')"
 				class="amount-control__button"
 				aria-label="Increase amount"
+				@click="$emit('increase')"
 			>
 				<Icon
 					name="material-symbols:add"

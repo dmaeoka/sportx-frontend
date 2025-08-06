@@ -1,8 +1,9 @@
 <template>
-	<div class="event-card">
+	<div
+		v-if="hasEventLabel(event)"
+		class="event-card">
 		<EventHeader :event="event" />
 		<EventBetting
-			v-if="hasEventLabel(event)"
 			:event="event"
 			:selected-bets="selectedBets"
 			@toggle-bet="handleToggleBet"
@@ -11,10 +12,6 @@
 </template>
 
 <script setup>
-import { useEventHelpers } from '../composables/useEventHelpers.js';
-import EventBetting from './EventBetting.vue';
-import EventHeader from './EventHeader.vue';
-
 // Define props that this component can receive
 defineProps({
 	event: {

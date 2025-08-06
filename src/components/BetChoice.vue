@@ -1,5 +1,5 @@
 <template>
-	<button @click="$emit('click')" :class="buttonClasses">
+	<button :class="buttonClasses" @click="$emit('click')">
 		<div class="bet-choice__content">
 			<div class="bet-choice__label">{{ choice.actor.label }}</div>
 			<div class="bet-choice__odd">{{ choice.odd }}</div>
