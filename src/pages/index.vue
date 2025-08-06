@@ -41,23 +41,11 @@ import { ref } from 'vue';
 // Import mock data
 import sportsData from '@/data/products.json';
 
-// Import the components
-import AppFooter from '@/components/AppFooter.vue';
-import AppHeader from '@/components/AppHeader.vue';
-import BettingSlip from '@/components/BettingSlip.vue';
-import EventsList from '@/components/EventsList.vue';
-import SuccessNotification from '@/components/SuccessNotification.vue';
-
-// Import composables
-import { useBettingLogic } from '@/composables/useBettingLogic.js';
-import { useSuccessMessage } from '@/composables/useSuccessMessage.js';
-
 // State
 const selectedBets = ref([]); // initial empty array
 const betAmount = ref(1); // initial amount of 1 eruo
 const year = new Date().getFullYear(); // Get the current year
 
-// Use composables deconstructing the hook
 const {
 	showSuccessMessage,
 	submittedBets,
