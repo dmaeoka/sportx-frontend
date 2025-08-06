@@ -12,7 +12,8 @@
 			<button
 				type="button"
 				class="notification__close"
-				@click="$emit('close')">
+				@click="$emit('close')"
+			>
 				<Icon
 					name="material-symbols:close-rounded"
 					class="notification__close-icon"

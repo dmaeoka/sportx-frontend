@@ -1,7 +1,5 @@
 <template>
-	<div
-		v-if="hasEventLabel(event)"
-		class="event-card">
+	<div v-if="hasEventLabel(event)" class="event-card">
 		<EventHeader :event="event" />
 		<EventBetting
 			:event="event"

@@ -47,7 +47,6 @@
 </template>
 
 <script setup>
-
 // Define props
 defineProps({
 	selectedBets: {
