@@ -2,7 +2,7 @@
 <template>
 	<footer class="footer">
 		<p class="footer__text">
-			<slot></slot>
+			<slot />
 		</p>
 	</footer>
 </template>

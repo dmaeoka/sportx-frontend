@@ -1,8 +1,5 @@
 <template>
-	<div class="app">
-		<!-- HEADER -->
-		<AppHeader> SportX Senior Lead Frontend </AppHeader>
-		<!-- SUCCESS NOTIFICATION -->
+	<div>
 		<SuccessNotification
 			v-if="showSuccessMessage"
 			:submitted-bets="submittedBets"
@@ -32,7 +29,6 @@
 				@submit="handleSubmit"
 			/>
 		</main>
-		<AppFooter> GiG SportX {{ year }} </AppFooter>
 	</div>
 </template>
 
@@ -44,7 +40,6 @@ import sportsData from '@/data/products.json';
 // State
 const selectedBets = ref([]); // initial empty array
 const betAmount = ref(1); // initial amount of 1 eruo
-const year = new Date().getFullYear(); // Get the current year
 
 const {
 	showSuccessMessage,
@@ -108,17 +103,6 @@ const handleSubmit = () => {
 </script>
 
 <style scoped>
-.app {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	font-family:
-		system-ui,
-		-apple-system,
-		sans-serif;
-	background-color: #ffffff;
-}
-
 .app__main {
 	display: flex;
 	flex: 1;

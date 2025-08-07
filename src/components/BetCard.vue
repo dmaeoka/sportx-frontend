@@ -3,10 +3,10 @@
 		<div class="bet-card__header">
 			<div class="bet-card__event">{{ bet.eventLabel }}</div>
 			<button
-				@click="$emit('remove')"
 				class="bet-card__remove"
 				title="Remove bet"
 				aria-label="Remove bet"
+				@click="$emit('remove')"
 			>
 				<Icon
 					name="material-symbols:close-rounded"
