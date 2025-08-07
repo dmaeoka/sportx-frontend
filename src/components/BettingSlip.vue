@@ -123,7 +123,7 @@ defineEmits([
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 .betting-slip__controls {
